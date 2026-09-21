@@ -359,6 +359,12 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 22px;
   box-shadow: 0 10px 30px rgba(54, 47, 40, 0.12);
 }
+.venue-photo-sketch {
+  object-position: 65% 55%;
+  box-shadow: none;
+  border: 1px solid var(--border);
+  background: var(--cream);
+}
 .venue-name {
   font-size: 1.4rem;
   margin-bottom: 6px;
