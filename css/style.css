@@ -52,7 +52,12 @@ a { color: inherit; text-decoration: none; }
 }
 .container.narrow { max-width: 760px; }
 
-.section { padding: 110px 0; }
+.section {
+  position: relative;
+  z-index: 1;
+  background: var(--bg);
+  padding: 110px 0;
+}
 .section.alt { background: var(--bg-alt); }
 
 .center { text-align: center; }
@@ -204,13 +209,25 @@ a { color: inherit; text-decoration: none; }
    Hero
    ========================================================================== */
 .hero {
-  position: relative;
+  position: fixed;
+  top: 0; left: 0; right: 0;
   height: 100vh;
   min-height: 640px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: 0;
+}
+
+/* La portada es fija; esto compensa el hueco que deja al salir del flujo,
+   para que el resto de la página empiece justo debajo de ella y la
+   "cubra" al hacer scroll. */
+#la-boda {
+  margin-top: 100vh;
+}
+@media (max-height: 640px) {
+  #la-boda { margin-top: 640px; }
 }
 .hero-img {
   position: absolute; inset: 0;
@@ -529,6 +546,8 @@ a { color: inherit; text-decoration: none; }
    Footer
    ========================================================================== */
 .footer {
+  position: relative;
+  z-index: 1;
   background: #201c17;
   color: #cbbfa9;
   text-align: center;
