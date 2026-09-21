@@ -566,7 +566,7 @@ a { color: inherit; text-decoration: none; }
 }
 .rsvp-embed iframe {
   width: 100%;
-  height: 1738px;
+  height: 680px;
   border: 0;
   display: block;
 }
@@ -582,7 +582,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 600px) {
-  .rsvp-embed iframe { height: 2000px; }
+  .rsvp-embed iframe { height: 560px; }
 }
 
 /* ==========================================================================
