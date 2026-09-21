@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Parisienne&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
   </button>
   <nav class="nav-links" id="navLinks">
     <a href="#la-boda" class="nav-link">La boda</a>
-    <a href="#cuando-donde" class="nav-link">Cuándo y dónde</a>
+    <a href="#dia-antes" class="nav-link">El día antes</a>
     <a href="#alojamiento" class="nav-link">Alojamiento</a>
     <a href="#dress-code" class="nav-link">Dress code</a>
     <a href="#regalo" class="nav-link">Regalo</a>
@@ -72,69 +72,53 @@
 
   <!-- LA BODA -->
   <section id="la-boda" class="section alt">
-    <div class="container">
-      <img src="assets/img/illustration-virgen.jpg" alt="Ilustración de la Virgen bendiciendo a Juan y Lucía en el altar" class="section-emblem" data-reveal loading="lazy">
+    <div class="container narrow">
       <p class="eyebrow center" data-reveal>Os esperamos</p>
       <h2 class="section-title center" data-reveal>La boda</h2>
+      <p class="lede center" data-reveal>Domingo 15 de agosto de 2027</p>
 
-      <div class="events">
-
-        <div class="event-card" data-reveal>
-          <span class="event-tag">Sábado 14 de agosto</span>
-          <h3>Adoración</h3>
-          <p class="event-time">19:30 h</p>
-          <p>La tarde antes de la boda queremos compartir con vosotros un rato de oración
-             y de acción de gracias, en la casa. Al terminar, nos quedamos con un
-             piscolabis para seguir la tarde juntos.</p>
+      <div class="venues">
+        <div class="venue" data-reveal>
+          <img class="venue-photo" src="assets/img/iglesia-mini.jpg" alt="Iglesia de la Asunción de Nuestra Señora, Robledo de Chavela" loading="lazy">
+          <h3 class="venue-name">Iglesia de la Asunción<br>de Nuestra Señora</h3>
+          <p class="venue-time">17:30 h</p>
+          <p class="venue-address">Pl. de la Iglesia, 2, Robledo de Chavela</p>
+          <a class="btn btn-dark venue-btn" href="https://www.google.com/maps/search/?api=1&query=Pl.+de+la+Iglesia+2+28294+Robledo+de+Chavela+Madrid" target="_blank" rel="noopener">Ver ubicación</a>
         </div>
 
-        <div class="event-card" data-reveal>
-          <span class="event-tag">Domingo 15 de agosto</span>
-          <h3>Ceremonia religiosa</h3>
-          <p class="event-time">17:30 h</p>
-          <p>Iglesia de la Asunción de Nuestra Señora<br>Pl. de la Iglesia, 2, Robledo de Chavela</p>
+        <div class="venue" data-reveal>
+          <img class="venue-photo" src="assets/img/illustration-virgen.jpg" alt="Casa de Oración La Cruz, Robledo de Chavela" loading="lazy">
+          <h3 class="venue-name">Casa de Oración<br>La Cruz</h3>
+          <p class="venue-time">Al finalizar la ceremonia</p>
+          <p class="venue-address">C. Antonio Machado, 4, Robledo de Chavela</p>
+          <a class="btn btn-dark venue-btn" href="https://www.google.com/maps/search/?api=1&query=C.+Antonio+Machado+4+28294+Robledo+de+Chavela+Madrid" target="_blank" rel="noopener">Ver ubicación</a>
         </div>
-
-        <div class="event-card" data-reveal>
-          <span class="event-tag">Domingo 15 de agosto</span>
-          <h3>Convite</h3>
-          <p class="event-time">Al finalizar la ceremonia</p>
-          <p>Casa de Oración La Cruz<br>C. Antonio Machado, 4, Robledo de Chavela</p>
-        </div>
-
       </div>
+
+      <p class="lede center venues-note" data-reveal>La iglesia y la casa están a solo 15 minutos andando entre sí.</p>
     </div>
   </section>
 
-  <!-- CUÁNDO Y DÓNDE -->
-  <section id="cuando-donde" class="section">
-    <div class="container">
-      <img src="assets/img/iglesia-mini.jpg" alt="Iglesia de la Asunción de Nuestra Señora, Robledo de Chavela" class="section-emblem round" data-reveal loading="lazy">
-      <p class="eyebrow center" data-reveal>Cuándo y dónde</p>
-      <h2 class="section-title center" data-reveal>Robledo de Chavela</h2>
-      <p class="lede center" data-reveal>Todo transcurre en el mismo pueblo: la casa y la iglesia están a solo 15 minutos andando.</p>
+  <!-- EL DÍA ANTES -->
+  <section id="dia-antes" class="section eve-section">
+    <div class="eve-bg"></div>
+    <div class="container narrow">
+      <p class="eyebrow center light" data-reveal>Sábado 14 de agosto</p>
+      <h2 class="section-title center light" data-reveal>El día antes</h2>
+      <p class="lede center light" data-reveal>19:30 h · En la casa</p>
 
-      <div class="maps-grid">
-        <div class="map-card" data-reveal>
-          <h3>Iglesia de la Asunción de Nuestra Señora</h3>
-          <p>Ceremonia · 17:30 h · Pl. de la Iglesia, 2, 28294 Robledo de Chavela, Madrid</p>
-          <div class="map-embed">
-            <iframe
-              src="https://maps.google.com/maps?q=Pl.%20de%20la%20Iglesia%2C%202%2C%2028294%20Robledo%20de%20Chavela%2C%20Madrid&t=&z=16&ie=UTF8&iwloc=&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la Iglesia de la Asunción de Nuestra Señora, Robledo de Chavela"></iframe>
-          </div>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Pl.+de+la+Iglesia+2+28294+Robledo+de+Chavela+Madrid" target="_blank" rel="noopener">Cómo llegar →</a>
+      <div class="eve-items">
+        <div class="eve-item" data-reveal>
+          <span class="eve-pin" aria-hidden="true">📍</span>
+          <h3 class="eve-name">Adoración</h3>
+          <hr class="eve-rule">
+          <p>Comenzaremos con un rato de oración y de acción de gracias.</p>
         </div>
-
-        <div class="map-card" data-reveal>
-          <h3>Casa de Oración La Cruz</h3>
-          <p>Convite · C. Antonio Machado, 4, 28294 Robledo de Chavela, Madrid</p>
-          <div class="map-embed">
-            <iframe
-              src="https://maps.google.com/maps?q=C.%20Antonio%20Machado%2C%204%2C%2028294%20Robledo%20de%20Chavela%2C%20Madrid&t=&z=16&ie=UTF8&iwloc=&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la Casa de Oración La Cruz, Robledo de Chavela"></iframe>
-          </div>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=C.+Antonio+Machado+4+28294+Robledo+de+Chavela+Madrid" target="_blank" rel="noopener">Cómo llegar →</a>
+        <div class="eve-item" data-reveal>
+          <span class="eve-pin" aria-hidden="true">📍</span>
+          <h3 class="eve-name">Piscolabis</h3>
+          <hr class="eve-rule">
+          <p>Al terminar, compartiremos un piscolabis para seguir la tarde juntos.</p>
         </div>
       </div>
     </div>

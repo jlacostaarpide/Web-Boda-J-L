@@ -342,89 +342,86 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ==========================================================================
-   Events / La boda
+   La boda — venues
    ========================================================================== */
-.section-emblem {
-  display: block;
-  width: 120px;
-  height: 160px;
-  object-fit: cover;
-  object-position: center;
-  margin: 0 auto 20px;
-  border-radius: 6px;
-  box-shadow: 0 10px 30px rgba(54, 47, 40, 0.15);
-}
-.section-emblem.round {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  border: 4px solid var(--cream);
-}
-
-.events {
-  margin-top: 56px;
+.venues {
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
 }
-.event-card {
-  background: var(--cream);
-  border: 1px solid var(--border);
+.venue { text-align: center; }
+.venue-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 10px;
-  padding: 36px 28px;
-  text-align: center;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 30px rgba(54, 47, 40, 0.12);
 }
-.event-tag {
-  display: inline-block;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-  margin-bottom: 14px;
+.venue-name {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
 }
-.event-card h3 { font-size: 1.6rem; margin-bottom: 6px; }
-.event-time {
+.venue-time {
   font-family: var(--font-body);
   color: var(--green);
   letter-spacing: 0.08em;
   font-size: 0.85rem;
-  margin: 0 0 14px;
+  margin: 0 0 4px;
 }
-.event-card p:last-child { color: var(--ink-soft); font-size: 0.92rem; margin: 0; }
+.venue-address {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin: 0 0 20px;
+}
+.venue-btn { padding: 12px 30px; font-size: 0.78rem; }
+.venues-note { margin-top: 46px; }
 
-@media (max-width: 860px) {
-  .events { grid-template-columns: 1fr; }
+@media (max-width: 700px) {
+  .venues { grid-template-columns: 1fr; gap: 46px; }
 }
 
 /* ==========================================================================
-   Maps
+   El día antes
    ========================================================================== */
-.maps-grid {
-  margin-top: 56px;
+.eve-section {
+  position: relative;
+  padding: 110px 0;
+  color: var(--cream);
+  overflow: hidden;
+}
+.eve-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #2f3a2a 0%, #40382a 55%, #2a2620 100%);
+  z-index: 0;
+}
+.eve-section .container { position: relative; z-index: 1; }
+.eve-items {
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
+  text-align: center;
 }
-.map-card h3 { font-size: 1.3rem; margin-bottom: 2px; }
-.map-card p { color: var(--ink-soft); margin: 0 0 14px; font-size: 0.9rem; }
-.map-embed {
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border);
+.eve-pin { font-size: 1.4rem; display: block; margin-bottom: 10px; }
+.eve-name {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: var(--cream);
+  margin-bottom: 16px;
 }
-.map-embed iframe {
-  width: 100%; height: 260px; border: 0; display: block;
+.eve-rule {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  width: 60px;
+  margin: 0 auto 16px;
 }
-.map-link {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.85rem;
-  color: var(--gold-dark);
-  border-bottom: 1px solid var(--gold-dark);
-}
+.eve-items p { color: #e7ddc9; font-size: 0.92rem; margin: 0; }
 
-@media (max-width: 760px) {
-  .maps-grid { grid-template-columns: 1fr; }
+@media (max-width: 700px) {
+  .eve-items { grid-template-columns: 1fr; gap: 36px; }
 }
 
 /* ==========================================================================
