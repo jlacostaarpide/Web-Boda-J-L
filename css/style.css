@@ -396,48 +396,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ==========================================================================
-   El día antes
-   ========================================================================== */
-.eve-section {
-  position: relative;
-  padding: 110px 0;
-  color: var(--cream);
-  overflow: hidden;
-}
-.eve-bg {
-  position: absolute; inset: 0;
-  background: linear-gradient(160deg, #2f3a2a 0%, #40382a 55%, #2a2620 100%);
-  z-index: 0;
-}
-.eve-section .container { position: relative; z-index: 1; }
-.eve-items {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  text-align: center;
-}
-.eve-pin { font-size: 1.4rem; display: block; margin-bottom: 10px; }
-.eve-name {
-  font-family: var(--font-script);
-  font-weight: 400;
-  font-size: 1.7rem;
-  color: var(--cream);
-  margin-bottom: 16px;
-}
-.eve-rule {
-  border: none;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  width: 60px;
-  margin: 0 auto 16px;
-}
-.eve-items p { color: #e7ddc9; font-size: 0.92rem; margin: 0; }
-
-@media (max-width: 700px) {
-  .eve-items { grid-template-columns: 1fr; gap: 36px; }
-}
-
-/* ==========================================================================
    Alojamiento
    ========================================================================== */
 .info-cards {
@@ -559,7 +517,7 @@ a { color: inherit; text-decoration: none; }
 /* ==========================================================================
    RSVP
    ========================================================================== */
-.rsvp-section { background: var(--bg-alt); }
+.rsvp-section { background: var(--bg); }
 .rsvp-embed {
   margin-top: 46px;
   background: var(--cream);
