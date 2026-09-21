@@ -12,11 +12,9 @@
   });
 
   /* ------------------------------------------------------------------ */
-  /* Sticky nav + mobile menu                                           */
+  /* Sticky nav                                                          */
   /* ------------------------------------------------------------------ */
   var nav = document.getElementById("nav");
-  var navToggle = document.getElementById("navToggle");
-  var navLinks = document.getElementById("navLinks");
 
   function onScroll() {
     if (window.scrollY > 60) {
@@ -27,21 +25,6 @@
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      var open = navLinks.classList.toggle("open");
-      navToggle.classList.toggle("open", open);
-      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    navLinks.querySelectorAll(".nav-link").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        navToggle.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
 
   /* ------------------------------------------------------------------ */
   /* Countdown — 15 de agosto de 2027, 17:30, hora de Madrid (CEST, +2)  */
