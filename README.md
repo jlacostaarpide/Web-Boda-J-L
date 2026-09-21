@@ -11,7 +11,7 @@ cual en GitHub Pages, Netlify, Vercel o cualquier hosting estático.
 ```
 index.html        página única con todas las secciones
 css/style.css      estilos
-js/main.js         cuenta atrás, menú, galería, formulario RSVP
+js/main.js         cuenta atrás, menú, galería, lightbox
 assets/img/        fotos (ya optimizadas para web)
 ```
 
@@ -30,33 +30,27 @@ Secciones de la página (con ancla, por si quieres enlazar directamente a una):
 Si más adelante compráis un dominio propio (p. ej. `juanylucia.com`), podéis
 añadirlo también en esa misma pantalla de Settings → Pages.
 
-## Activar el formulario de confirmación (RSVP)
+## Formulario de confirmación (RSVP)
 
-El formulario de la web usa **[Formspree](https://formspree.io)**, un
-servicio gratuito que envía por email lo que la gente rellena, sin necesidad
-de programar ningún backend.
+La sección `#rsvp` incrusta un **Google Form** dentro de la propia página
+mediante un `<iframe>` (en `index.html`, dentro de `.rsvp-embed`). Se eligió
+Google Forms en vez de un servicio tipo Formspree porque, con ~180
+invitados, el plan gratuito de la mayoría de esos servicios tiene un límite
+mensual de envíos que se podría superar si las respuestas llegan agrupadas
+(justo después de enviar las invitaciones, o cerca de la fecha límite).
+Google Forms no tiene ese límite y las respuestas se guardan solas en una
+hoja de Google Sheets vinculada al formulario.
 
-1. Entra en https://formspree.io y crea una cuenta gratuita.
-2. Crea un formulario nuevo (New Form) y dale un nombre, p. ej. "RSVP boda".
-3. Formspree te da una URL tipo `https://formspree.io/f/abcdwxyz`. Copia esa
-   URL.
-4. Abre `js/main.js` y busca esta línea, cerca del final del archivo:
+Para cambiar las preguntas del formulario, o consultar las respuestas, se
+edita directamente desde el propio Google Forms (no hace falta tocar el
+código). Si en algún momento se crea un formulario nuevo, solo hay que
+sustituir la URL en `index.html`:
 
-   ```js
-   var FORMSPREE_ENDPOINT = "https://formspree.io/f/REPLACE_ME";
-   ```
+```html
+<iframe src="https://forms.gle/TU-NUEVO-ENLACE" ...>
+```
 
-   Sustituye `https://formspree.io/f/REPLACE_ME` por la URL que te ha dado
-   Formspree.
-5. Guarda, sube el cambio (`git add`, `git commit`, `git push`) y listo: cada
-   confirmación que se rellene en la web os llegará por email.
-
-Mientras no se rellene ese paso, el formulario muestra un aviso pidiendo
-paciencia en vez de fallar en silencio.
-
-> El plan gratuito de Formspree permite un número limitado de envíos al mes,
-> más que suficiente para una boda. Si tenéis muchísimos invitados, revisad
-> los límites del plan gratuito en su web.
+por el enlace del nuevo formulario.
 
 ## Cosas que os pueden interesar personalizar
 

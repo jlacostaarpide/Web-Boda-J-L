@@ -261,58 +261,17 @@
       <h2 class="section-title center" data-reveal>Confirmar asistencia</h2>
       <p class="lede center" data-reveal>Ayudadnos a organizarlo todo confirmando antes del <strong>15 de junio de 2027</strong>.</p>
 
-      <form id="rsvpForm" class="rsvp-form" data-reveal>
-        <div class="form-row">
-          <label for="name">Nombre y apellidos *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-row">
-          <label for="email">Email o teléfono de contacto *</label>
-          <input type="text" id="email" name="email" required>
-        </div>
-
-        <fieldset class="form-row">
-          <legend>¿Asistirás? *</legend>
-          <div class="radio-group">
-            <label><input type="radio" name="attending" value="Sí, allí estaré" required> Sí, allí estaré</label>
-            <label><input type="radio" name="attending" value="No podré ir"> No podré ir</label>
-          </div>
-        </fieldset>
-
-        <div class="form-row">
-          <label for="guests">Número de acompañantes (incluido tú)</label>
-          <input type="number" id="guests" name="guests" min="1" value="1">
-        </div>
-
-        <fieldset class="form-row">
-          <legend>¿Te quedas a dormir la noche del domingo al lunes?</legend>
-          <div class="radio-group">
-            <label><input type="radio" name="sleepover" value="Sí, me gustaría"> Sí, me gustaría</label>
-            <label><input type="radio" name="sleepover" value="No hace falta"> No hace falta</label>
-            <label><input type="radio" name="sleepover" value="Aún no lo sé"> Aún no lo sé</label>
-          </div>
-        </fieldset>
-
-        <div class="form-row">
-          <label for="allergies">Alergias o restricciones alimentarias</label>
-          <textarea id="allergies" name="allergies" rows="2"></textarea>
-        </div>
-
-        <div class="form-row">
-          <label for="message">Algo que queráis decirnos</label>
-          <textarea id="message" name="message" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-dark" id="rsvpSubmit">Enviar confirmación</button>
-
-        <p class="form-note" id="rsvpNote">
-          Este formulario necesita conectarse a un servicio gratuito (Formspree) para
-          recibir las respuestas — mirad el README del proyecto para activarlo en un minuto.
-        </p>
-        <p class="form-success" id="rsvpSuccess" hidden>¡Gracias! Hemos recibido vuestra confirmación 💛</p>
-        <p class="form-error" id="rsvpError" hidden>Algo ha fallado al enviar el formulario. Escribidnos directamente, por favor.</p>
-      </form>
+      <div class="rsvp-embed" data-reveal>
+        <iframe
+          src="https://forms.gle/PqmwJbjWeXGgksp68"
+          title="Formulario de confirmación de asistencia — Boda de Juan y Lucía"
+          loading="lazy">
+          Cargando…
+        </iframe>
+      </div>
+      <p class="form-note">
+        ¿No carga el formulario? <a href="https://forms.gle/PqmwJbjWeXGgksp68" target="_blank" rel="noopener">Ábrelo en una pestaña aparte</a>.
+      </p>
     </div>
   </section>
 
