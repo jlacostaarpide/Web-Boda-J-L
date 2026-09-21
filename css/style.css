@@ -342,40 +342,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ==========================================================================
-   Story grid
-   ========================================================================== */
-.story-grid {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.story-photo {
-  margin: 0;
-  overflow: hidden;
-  border-radius: 6px;
-  position: relative;
-  aspect-ratio: 3 / 4;
-}
-.story-photo img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform .6s ease;
-}
-.story-photo:hover img { transform: scale(1.06); }
-.story-photo figcaption {
-  position: absolute; left: 0; right: 0; bottom: 0;
-  padding: 14px 16px 12px;
-  background: linear-gradient(0deg, rgba(0,0,0,.55), transparent);
-  color: #fff;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-}
-
-@media (max-width: 760px) {
-  .story-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* ==========================================================================
    Events / La boda
    ========================================================================== */
 .section-emblem {
@@ -387,6 +353,12 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto 20px;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(54, 47, 40, 0.15);
+}
+.section-emblem.round {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  border: 4px solid var(--cream);
 }
 
 .events {
