@@ -348,7 +348,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--cream);
 }
 .venue-photo-casa {
-  object-position: 22% 55%;
+  object-position: center center;
 }
 .venue-name {
   font-size: 1.4rem;
