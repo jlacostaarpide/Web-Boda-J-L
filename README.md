@@ -1,4 +1,4 @@
-# Web de boda — Juan & Lucía 💍
+# <img src="assets/img/favicon.svg" width="28" height="28" alt=""> Web de boda — Juan & Lucía
 
 Web de una sola página (sin navegación entre páginas) para la boda de Juan y
 Lucía, el **15 de agosto de 2027** en Robledo de Chavela (Madrid).
@@ -12,12 +12,12 @@ cual en GitHub Pages, Netlify, Vercel o cualquier hosting estático.
 index.html        página única con todas las secciones
 css/style.css      estilos
 js/main.js         cuenta atrás, menú, galería, lightbox
-assets/img/        fotos (ya optimizadas para web)
+assets/img/        fotos e ilustraciones (ya optimizadas para web)
 ```
 
 Secciones de la página (con ancla, por si quieres enlazar directamente a una):
-`#inicio`, `#nosotros`, `#la-boda`, `#cuando-donde`, `#alojamiento`,
-`#dress-code`, `#regalo`, `#galeria`, `#rsvp`.
+`#inicio`, `#la-boda`, `#alojamiento`, `#dress-code`, `#regalo`, `#rsvp`,
+`#galeria`.
 
 ## Publicar en GitHub Pages
 
@@ -38,19 +38,20 @@ Google Forms en vez de un servicio tipo Formspree porque, con ~180
 invitados, el plan gratuito de la mayoría de esos servicios tiene un límite
 mensual de envíos que se podría superar si las respuestas llegan agrupadas
 (justo después de enviar las invitaciones, o cerca de la fecha límite).
-Google Forms no tiene ese límite y las respuestas se guardan solas en una
-hoja de Google Sheets vinculada al formulario.
+Google Forms no tiene ese límite, y las respuestas se pueden vincular a una
+hoja de Google Sheets para consultarlas fácilmente.
 
 Para cambiar las preguntas del formulario, o consultar las respuestas, se
 edita directamente desde el propio Google Forms (no hace falta tocar el
-código). Si en algún momento se crea un formulario nuevo, solo hay que
-sustituir la URL en `index.html`:
+código). Si en algún momento se crea un formulario nuevo, hay que sustituir
+dos cosas en `index.html`:
 
 ```html
-<iframe src="https://forms.gle/TU-NUEVO-ENLACE" ...>
+<iframe src="https://docs.google.com/forms/d/e/TU-ID-DE-FORMULARIO/viewform?embedded=true" ...>
 ```
 
-por el enlace del nuevo formulario.
+y el enlace de "Ábrelo en una pestaña aparte" (el `forms.gle` corto que
+genera el propio Google Forms al pulsar "Enviar").
 
 ## Cosas que os pueden interesar personalizar
 
@@ -59,12 +60,12 @@ por el enlace del nuevo formulario.
   `#alojamiento` en `index.html` (segunda `.info-card`) y sustituid el
   `<span class="badge">Próximamente</span>` por los hoteles/enlaces que
   queráis.
-- **Datos para transferencia** (sección "Regalo") — si al final queréis
-  añadir un IBAN o un enlace de Bizum, se puede añadir fácilmente en esa
-  sección de `index.html`.
+- **Datos para transferencia** (sección "Regalo") — sustituid el IBAN de
+  ejemplo (`ESXX XXXX...`) por el real, y el nombre/teléfono de contacto
+  para sorpresas si cambia.
 - **Fotos** — todas están en `assets/img/`. Puedes añadir o cambiar
   cualquiera; solo actualiza la ruta correspondiente en `index.html` (hero,
-  historia, galería, etc.). Se recomienda que no pesen más de ~500 KB cada
+  "La boda", galería, etc.). Se recomienda que no pesen más de ~500 KB cada
   una para que la web cargue rápido en el móvil.
 - **Fecha límite de confirmación** — aparece en la sección RSVP
   ("antes del 15 de junio de 2027"); cambiadla en `index.html` si hace falta.
